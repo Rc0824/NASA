@@ -29,3 +29,14 @@ btn.onclick = function() {
     console.log("Button clicked"); // 添加这一行
     modal.style.display = "block";
   }
+
+// 获取模态框和滚动容器
+var modal = document.getElementById("myModal");
+var scrollableContent = modal.querySelector(".modal-dialog-scrollable");
+
+// 计算视窗高度的80%
+var windowHeight = window.innerHeight;
+var maxContentHeight = windowHeight * 0.7;
+
+// 设置滚动容器的max-height
+scrollableContent.style.maxHeight = maxContentHeight + "px";

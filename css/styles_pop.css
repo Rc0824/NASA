@@ -27,6 +27,10 @@
         /*border: 1px solid #888;*/
         width: 35%; /* Could be more or less, depending on screen size */
     }
+
+    .modal-dialog-scrollable {
+      overflow-y: auto;
+    }
   
   /* The Close Button */
   .modal-close {
