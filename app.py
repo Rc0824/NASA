@@ -40,7 +40,7 @@ os.environ["OPENAI_API_KEY"] = "sk-O9fpKS0Ujbip9f24ai2bT3BlbkFJk49Tq6azSfxiDYGgp
 #     ),
 # ]
 
-llm =  OpenAI(tempature=0.7)
+llm =  OpenAI(tempature=0.6)
 tools = load_tools(["serpapi"], llm=llm)
 agent = initialize_agent(tools,llm,agent ="chat-conversational-react-description", verbose = True)
 agent.run("Who is the champion of NBA in 2022?")
