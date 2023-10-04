@@ -38,7 +38,7 @@ os.environ["OPENAI_API_KEY"] = "sk-O9fpKS0Ujbip9f24ai2bT3BlbkFJk49Tq6azSfxiDYGgp
 #         func = search.run,
 #         description ="search your answer on google"
 #     ),
-# ]
+# ] 111
 
 llm =  OpenAI(tempature=0.7)
 tools = load_tools(["serpapi"], llm=llm)
