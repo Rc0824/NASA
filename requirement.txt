@@ -1,0 +1,3 @@
+langchain --upgrade
+openai
+requests
