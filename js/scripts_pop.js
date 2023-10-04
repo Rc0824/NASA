@@ -25,10 +25,6 @@ window.onclick = function(event) {
   }
 }
 
-btn.onclick = function() {
-    console.log("Button clicked"); // 添加这一行
-    modal.style.display = "block";
-  }
 
 // 获取模态框和滚动容器
 var modal = document.getElementById("myModal");

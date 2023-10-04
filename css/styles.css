@@ -10956,6 +10956,9 @@ video.bg-video {
   width: 4rem;
   border-radius: 100rem;
 }
+.google_search {
+  display: none;
+}
 
 @media (min-width: 992px) {
   .social-icons {
