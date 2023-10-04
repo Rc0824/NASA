@@ -5,7 +5,7 @@ from langchain.llms import OpenAI
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.utilities import GoogleSearchAPIWrapper
-from langchain.utilities import SerpAPIWrapper
+import response
 
 # api_key = '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'
 
@@ -27,20 +27,16 @@ from langchain.utilities import SerpAPIWrapper
 # json = response.json()
 # print(json)
 
+os.environ["OPENAI_API_KEY"] = "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"
+os.environ["SERPAPI_API_KEY"] = "d1f03a506e536cde04e69f11e1b879ce8ac85952937cb1f0344603321e6cd62e"
 
-# api_key = os.environ["GOOGLE_API_KEY"]
-os.environ["OPENAI_API_KEY"] = "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"
 
-# search = GoogleSearchAPIWrapper()
-# tools = [
-#     load_tools (
-#         name = 'search' ,
-#         func = search.run,
-#         description ="search your answer on google"
-#     ),
-# ]
-
-llm =  OpenAI(tempature=0.6)
-tools = load_tools(["serpapi"], llm=llm)
-agent = initialize_agent(tools,llm,agent ="chat-conversational-react-description", verbose = True)
+llm = OpenAI(temperature=0.6)
+tool_name = ["serpapi"]
+tools = load_tools(tool_name)
+agent = initialize_agent(tools,llm,agent ="zero-shot-react-description", verbose = True)
 agent.run("Who is the champion of NBA in 2022?")
+new_sentence = f"{response}"
+
+# 打印新句子
+print(new_sentence)
