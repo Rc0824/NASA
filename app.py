@@ -4,8 +4,6 @@ import requests
 from langchain.llms import OpenAI
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
-from langchain.utilities import GoogleSearchAPIWrapper
-import response
 
 # api_key = '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'
 
@@ -36,7 +34,5 @@ tool_name = ["serpapi"]
 tools = load_tools(tool_name)
 agent = initialize_agent(tools,llm,agent ="zero-shot-react-description", verbose = True)
 agent.run("Who is the champion of NBA in 2022?")
-new_sentence = f"{response}"
 
-# 打印新句子
-print(new_sentence)
+
