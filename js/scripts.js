@@ -2,4 +2,4 @@
 var video = document.querySelector(".bg-video");
 
 // 设置播放速度
-video.playbackRate = 0.6;
+video.playbackRate = 0.7;
