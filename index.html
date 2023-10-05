@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- Background Video-->
-        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg_earth.mp4" type="video/mp4" /></video>
         <!-- Masthead-->
         <div class="masthead">
             <div class="masthead-content text-white">
@@ -28,18 +28,25 @@
                     <h1 class="fst-italic lh-1 mb-4">NASA</h1>
                     <p class="mb-5">We're working hard to finish the development of this site. <br>Below is the Search Engine!</br></p>
                     <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
                         <label class="onoffswitch-label" for="myonoffswitch">
                             <span class="onoffswitch-inner"></span>
                             <span class="onoffswitch-switch"></span>
                         </label>
                     </div>
-                    <script src="script.js"></script>
+                    
                     <br><br/>
    
+                    <!-- google search box -->
+                    <div class="google_search">
+                        <script async src="https://cse.google.com/cse.js?cx=24eb876b7b6c646d6"></script>
+                        <div class="gcse-search" enableAutoComplete="true"></div>
                         
+                    </div>
+
+                    <!--gpt chat box-->
                     <div class="row input-group-newsletter">
-                        <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                        <div class="col"><input class="form-control" id="email" type="text" placeholder="Anything want to search?" aria-label="chatbot search" data-sb-validations="required" /></div>
                         <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg></button></div>
