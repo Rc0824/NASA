@@ -1,3 +1,5 @@
 langchain --upgrade
 openai
 requests
+flask
+flask-cors
