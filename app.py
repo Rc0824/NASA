@@ -7,7 +7,7 @@ from langchain.tools import AIPluginTool
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins="https://rc0824.github.io/NASA/")
+CORS(app, origins="http://127.0.0.1:50649")
 
 # Set environment variables
 os.environ["OPENAI_API_KEY"] = "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"
