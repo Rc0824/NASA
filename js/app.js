@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("submitButton");
     const responseTextarea = document.getElementById("modal-white");
+    var content = document.getElementById("email");
+
     // const responseParagraph = document.querySelector(".modal-dialog-scrollable p");
     const responseContainer = document.querySelector(".modal-dialog-scrollable p");
 
     btn.onclick = function(e) {
+        // change the placeholder text
+        content.placeholder = "searching... please wait";
+        content.classList.add("red-placeholder");
+        content.style.fontWeight = "bold";
         e.preventDefault();
         // Get user input from the form
         const userInput = document.getElementById("email").value;
@@ -25,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const responseText = data.response;
                 responseContainer.innerHTML = responseText;
                 modal.style.display = "block";
+                // change the placeholder text back
+                inputElement.placeholder = "Anything want to search?";
                 // responseParagraph.textContent = data;
             })
             .catch((error) => {
