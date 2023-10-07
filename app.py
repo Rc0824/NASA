@@ -4,13 +4,14 @@ from langchain.llms import OpenAI
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.tools import AIPluginTool
+from langchain.chat_models import ChatOpenAI
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins="http://127.0.0.1:50649")
+CORS(app, origins="http://127.0.0.1:57413")
 
 # Set environment variables
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["SERPAPI_API_KEY"] = "d1f03a506e536cde04e69f11e1b879ce8ac85952937cb1f0344603321e6cd62e"
 
 # Initialize OpenAI and tools
