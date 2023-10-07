@@ -6,19 +6,21 @@ from langchain.agents import initialize_agent
 from langchain.tools import AIPluginTool
 from langchain.chat_models import ChatOpenAI
 from flask_cors import CORS
+from langchain.memory import ConversationBufferMemory
 
 app = Flask(__name__)
-CORS(app, origins="http://127.0.0.1:57413")
+CORS(app, origins="http://127.0.0.1:5500")
 
 # Set environment variables
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["SERPAPI_API_KEY"] = "d1f03a506e536cde04e69f11e1b879ce8ac85952937cb1f0344603321e6cd62e"
 
 # Initialize OpenAI and tools
-llm = OpenAI(temperature=0.8, model_name="gpt-3.5-turbo")
+llm = OpenAI(temperature=0.8)
 tool_name = ["serpapi"]
 tools = load_tools(tool_name)
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True, memory=memory)
 
 @app.route('/app/', methods=['GET','POST'])
 def ask_question():
