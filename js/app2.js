@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("submitButton");
     const responseTextarea = document.getElementById("modal-white");
-    var content = document.getElementById("email");
+    var content = document.getElementById("email_popup");
     const btn_pop = document.getElementById("submitButton_popup");
 
     // const responseParagraph = document.querySelector(".modal-dialog-scrollable p");
     const responseContainer = document.querySelector(".modal-dialog-scrollable p");
 
-    btn.onclick = function(e) {
+    btn_pop.onclick = function(e) {
         // change the placeholder text
         content.placeholder = "searching... please wait";
         content.classList.add("red-placeholder");
         content.style.fontWeight = "bold";
         e.preventDefault();
         // Get user input from the form
-        const userInput = document.getElementById("email").value;
+        const userInput = document.getElementById("email_popup").value;
 
         // Send a POST request to your Flask server
         fetch("http://127.0.0.1:5000/app/", {
