@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // responseTextarea.value = data.response;     
                 console.log(data);
                 const responseText = data.response;
-                responseContainer.innerHTML = responseText;
+                responseContainer.innerHTML += responseText+"<br>"+ "<br>";
                 modal.style.display = "block";
                 // change the placeholder text back
                 inputElement.placeholder = "Anything want to search?";
