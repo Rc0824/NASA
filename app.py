@@ -12,11 +12,11 @@ app = Flask(__name__)
 CORS(app, origins="http://127.0.0.1:5500")
 
 # Set environment variables
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["SERPAPI_API_KEY"] = "d1f03a506e536cde04e69f11e1b879ce8ac85952937cb1f0344603321e6cd62e"
 
 # Initialize OpenAI and tools
-llm = ChatOpenAI(temperature=0.8,model="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0.8,model="gpt-3.5-turbo",max_tokens=2000)
 tool_name = ["serpapi"]
 tools = load_tools(tool_name)
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)

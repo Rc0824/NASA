@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btn_pop.onclick = function(e) {
         // change the placeholder text
-        content.placeholder = "searching... please wait";
-        content.classList.add("red-placeholder");
-        content.style.fontWeight = "bold";
+        
         e.preventDefault();
         // Get user input from the form
         const userInput = document.getElementById("email_popup").value;
-
+        content.value = "";
+        content.placeholder = "searching... please wait";
+        content.classList.add("red-placeholder");
+        content.style.fontWeight = "bold";
         // Send a POST request to your Flask server
         fetch("http://127.0.0.1:5000/app/", {
             method: "POST",

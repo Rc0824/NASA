@@ -16,8 +16,8 @@ onoffswitch.addEventListener('change', function() {
     console.log("unchecked");
   }
 });
-// 获取视频元素
+// get video element
 var video = document.querySelector(".bg-video");
 
-// 设置播放速度
+// set video speed
 video.playbackRate = 0.7;

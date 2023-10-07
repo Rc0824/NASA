@@ -33,23 +33,24 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 // change the placeholder text back 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    content.placeholder = "Anything want to search?";
-    content.classList.remove("red-placeholder");
-    content.style.fontWeight = 400;
-  }
-}
+
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//     content.placeholder = "Anything want to search?";
+//     content.classList.remove("red-placeholder");
+//     content.style.fontWeight = 400;
+//   }
+// }
 
 
-// 获取模态框和滚动容器
+// Get the modal
 var modal = document.getElementById("myModal");
 var scrollableContent = modal.querySelector(".modal-dialog-scrollable");
 
-// 计算视窗高度的80%
+// calculate maximum height
 var windowHeight = window.innerHeight;
 var maxContentHeight = windowHeight * 0.7;
 
-// 设置滚动容器的max-height
+// set maximum height to modal body
 scrollableContent.style.maxHeight = maxContentHeight + "px";
